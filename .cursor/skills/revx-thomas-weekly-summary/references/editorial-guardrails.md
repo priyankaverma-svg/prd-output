@@ -2,57 +2,79 @@
 
 ## Core rule
 
-**Synthesize themes — never transcribe the channel.**
+**Synthesize themes — never transcribe.** Leadership skim-reads in under 60 seconds.
 
-The reader gets what mattered and what to do, not a play-by-play of who said what when.
+## Hard length limits (non-negotiable)
+
+| Limit | Value |
+|-------|-------|
+| **Total message** | ≤ 900 characters (both blocks combined) |
+| **Bullets per section** | Max **2**; use **1** when possible |
+| **Words per bullet** | Max **15** |
+| **SOW block total bullets** | Max **4** (combine statuses) |
+| **Empty sections** | **Omit** the section header entirely |
+| **Footer** | One line: `_#revx-thomas · {week}_` — no message counts, no amendment essay |
+
+If over limit after EDIT, cut lowest-priority bullets until under 900 chars.
 
 ## Abstraction
 
 | Do | Don't |
 |----|--------|
-| Roll related messages into one bullet | One bullet per Slack message |
-| Name decisions and outcomes | List every participant |
-| Max 2–4 bullets per section | Exhaustive thread replay |
-| Merge duplicate threads | Repeat same topic across sections |
+| One theme = one short bullet | Multi-clause bullets with semicolons |
+| Merge related topics | Separate bullets for same theme |
+| Drop "completed" admin noise | List every doc share and MoM |
+| Combine SOW items: `1.5–1.6 in progress` | One bullet per SOW line when status unchanged |
 
-## Voice (Slack-optimized)
+## Voice
 
-- Each bullet ≤ 1–2 lines
-- Active voice: "Campaign_Name_v2 UAT started" not "There was discussion about…"
-- Spell out acronyms once: HubSpot (HS), Salesforce (SF), Marketing Qualified Lead (MQL)
-- No filler: cut "FYI", "quick update", "as discussed", emoji noise
-- No timestamps unless deadline is the point
+- Telegram-style: noun + outcome (`Attribution: first+last touch agreed`)
+- No sub-bullets, no parentheticals, no "team discussed"
+- Acronyms OK if widely known (HS, SF); spell out once only if needed
+- Active voice only
 
-## Exclude
+## Section priority (cut in this order if too long)
 
-- Updates with no decision ("working on X") unless SOW status changes
-- Social / off-topic / reactions-only
-- Long technical dumps — compress to outcome
-- Verbatim quotes unless exact wording is a decision record
+1. Drop *Hotly debated* if same theme already in *Top*
+2. Merge *Done* into *Top* as past-tense clause
+3. Trim *Next* to owner + action only (no meeting names)
+4. SOW: one line for on-track, one for at-risk, one for quiet items combined
 
 ## Section bars
 
-| Section | Bar |
-|---------|-----|
-| Top discussion points | 3–5 **themes**, not people posting |
-| Action items completed | Clear done signal only: shipped, merged, signed off, closed ticket |
-| Upcoming action items | Forward-looking + @owner when known |
-| Hotly debated | Real disagreement or open fork — not "long thread" alone |
-| Need focus / attention | Blockers, missed deadlines, escalations, silent P0 SOW items |
+| Section | Max bullets | Content |
+|---------|-------------|---------|
+| Top | 2 | Decisions + themes only |
+| Done | 1 | Biggest completions; omit if none material |
+| Next | 2 | Owner + verb; highest priority only |
+| Debate | 1 | Single open fork |
+| Focus | 1 | Top blocker or decision |
+| SOW | 4 | Status deltas only — not a registry |
 
-## SOW compliance block
+## SOW block (compact)
 
-- Map signal → **SOW ID + status delta** — not message recap
-- Baseline status + weekly evidence only
-- **"No channel signal"** is valid — do not invent progress
-- Never mark on track because topic was merely mentioned
+Format as tight status lines, not subsections:
+
+```
+*SOW*
+• On track: {ids} — {3-5 word delta}
+• At risk: {ids} — {why}
+• Quiet: {ids combined} — no signal
+```
+
+Skip "In progress (no weekly delta)" — fold into Quiet or omit.
+Skip "Amendments in effect" unless user asks.
+Skip Phase 2 mention when week is pre-May unless relevant.
 
 ## EDIT step
 
-Before CHECK, rewrite any bullet that reads like a chat log. Combine related points. Cut noise.
+1. Count characters — must be ≤ 900
+2. Shorten every bullet to ≤ 15 words
+3. Delete duplicate themes across sections
+4. Remove any bullet that restates another
 
 ## Anti-pattern
 
-**Bad:** Priyanka said X. Max replied Y. Uwa asked Z.
+**Bad (too long):** Inclusion/exclusion: Team reviewed Tigran's comments on criteria doc; RevX will publish updated inclusion list. Z-archive forms stay for history only.
 
-**Good:** *Attribution:* MarOps alignment open on Create Date — blocks Bucket 4.1.
+**Good:** Inclusion list update in flight; z-archive = history only.

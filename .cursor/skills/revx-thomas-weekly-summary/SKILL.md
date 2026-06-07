@@ -24,7 +24,8 @@ and adds a **separate SOW compliance** block. Default **test mode** = DM to requ
 - **Two blocks** — channel summary + SOW compliance (separate, with `---`)
 - **Never invent** status, completions, metrics, or SOW progress
 - **Ignore Est. Hours** in all SOW references
-- **Max 2–4 bullets per section** — combine or cut
+- **Compact default** — ≤ 900 chars total; max 2 bullets/section, 15 words/bullet — see editorial guardrails
+- **Omit empty sections** — no "None this week" padding
 - **Test default** — DM to requester; prod channel only on explicit request
 - **Week window** — Sunday 00:00 – Saturday 23:59 America/New_York unless user specifies dates
 
@@ -86,20 +87,23 @@ Phase 2 is primary from May onward; SOW 1 in-progress items stay on radar.
 
 ## EDIT
 
-Rewrite bullets that read like chat logs. Merge duplicates. Cut noise.
+1. Rewrite chat-log bullets → ≤ 15 words each
+2. Merge duplicate themes across sections
+3. **Count characters — must be ≤ 900**; cut per priority order in editorial guardrails
 
 ---
 
 ## CHECK
 
+- [ ] **Total ≤ 900 characters**
 - [ ] Not a transcript — synthesized themes only
-- [ ] ≤4 bullets per section
-- [ ] Two blocks present (summary + SOW)
+- [ ] ≤2 bullets per section (≤1 for Done/Debate/Focus)
+- [ ] Empty sections omitted
+- [ ] SOW block ≤ 4 compact lines
 - [ ] No invented SOW status or completions
-- [ ] "No channel signal" used where appropriate
-- [ ] Acronyms spelled out on first use
-- [ ] Hotly debated = real disagreement, not volume
 - [ ] Test mode → DM only unless prod confirmed
+
+**Example:** [examples.md](examples.md)
 
 ---
 

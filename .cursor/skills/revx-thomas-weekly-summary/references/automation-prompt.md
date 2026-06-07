@@ -11,7 +11,7 @@ MODE: test — DM summary to Priyanka Verma only. Do NOT post to #supplier-new-l
 
 Steps:
 1. Read #revx-thomas including threads (Slack MCP).
-2. Synthesize per references/editorial-guardrails.md — themes only, never transcript.
+2. Synthesize COMPACT per editorial-guardrails.md — ≤900 chars total, themes only, never transcript.
 3. Build separate SOW compliance block using sow-phase1-baseline, sow-phase2-baseline, sow-dependencies.
 4. Ignore Est. Hours. Never invent status or metrics.
 5. Run CHECK from SKILL.md.

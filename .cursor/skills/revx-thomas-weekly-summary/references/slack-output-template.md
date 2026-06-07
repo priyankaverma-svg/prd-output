@@ -1,44 +1,37 @@
-# Slack output template — copy structure exactly
+# Slack output template — COMPACT (default)
+
+**Target: ≤ 900 characters total.** Omit empty sections.
 
 ```
-*#revx-thomas Weekly Summary*
-_Week of Sun {MM/DD} – Sat {MM/DD/YYYY}_
+*#revx-thomas · Week Sun {MM/DD}–Sat {MM/DD}*
 
-*Top discussion points*
+*Top*
+• …
 • …
 
-*Action items completed*
+*Done*
 • …
 
-*Upcoming action items*
+*Next*
 • …
 
-*Hotly debated*
+*Debate*
 • …
 
-*Need focus / attention*
+*Focus*
 • …
 
 ---
 
-*SOW compliance update*
-_May 2026 Phase 2 + open SOW 1 · same week_
-
-*On track*
-• …
-
-*At risk / slipping*
-• …
-
-*Blocked (per SOW dependencies)*
-• …
-
-*No channel signal this week*
-• …
-
-_Amendments in effect: First-touch P0 completed; Company ID P1 yet to be picked._
-
-_Source: #revx-thomas · {N} messages · {mode: test DM | prod channel}_
+*SOW*
+• On track: …
+• At risk: …
+• Quiet: …
 ```
 
-Empty section: `_None this week._` (max one line, not omitted)
+## Rules
+
+- Max 2 bullets in Top/Next; max 1 in Done/Debate/Focus
+- Max 4 lines in SOW block
+- No `---` if SOW block is empty (rare)
+- Section labels: `*Top*` `*Done*` `*Next*` `*Debate*` `*Focus*` `*SOW*` — not full sentences

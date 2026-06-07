@@ -23,6 +23,7 @@ Cursor skills for product and business teams: BRD/PRD interviews, 6-page docx ex
    - `@release-doc-writer` — long-form release one-pager (PM/Eng)
    - `@release-notes` — 7-line slot for `#pdt-releases` (PM/Eng)
    - `@release-newsletter-consolidator` — newsletter draft from `#pdt-releases` (Central Comms)
+   - `@revx-thomas-weekly-summary` — `#revx-thomas` weekly digest + SOW compliance (RevX)
 
 5. **BRD/PRD:** one question at a time → review → 6-page docx → optional handoff.
 
@@ -42,6 +43,8 @@ Cursor skills for product and business teams: BRD/PRD interviews, 6-page docx ex
 | `.cursor/skills/release-doc-writer/` | Release one-pager (Calendar of Product Release Notes template) |
 | `.cursor/skills/release-notes/` | 7-line slot for `#pdt-releases` |
 | `.cursor/skills/release-newsletter-consolidator/` | Newsletter consolidation for Central Comms |
+| `.cursor/skills/revx-thomas-weekly-summary/` | `#revx-thomas` weekly summary + SOW compliance |
+| `AUTOMATION.md` | Cursor Automation setup (Monday 7 AM ET) |
 | `AI-INSTRUCTIONS.md` | Human-readable workflow summary |
 | `outputs/` | Generated BRD/PRD/release-note files |
 | `requirements.txt` | Python deps for docx export |
@@ -101,6 +104,19 @@ ENTRY → RELEASE DOC CHECK → EXTRACT → GATE → WRITE → CHECK → CHANNEL
 - Buckets by routing tag into fixed newsletter template
 - Hands off draft — human sends to executive leadership
 - Optional: reminder nudge to `#pdt-operations`
+
+## RevX Thomas weekly summary
+
+```
+@revx-thomas-weekly-summary: READ #revx-thomas → SYNTHESIZE → SOW compliance → DM (test) or channel (prod)
+```
+
+- **Source:** `#revx-thomas` (Sun–Sat week)
+- **Test:** DM to requester (default)
+- **Prod:** `#supplier-new-leads-generation-internalonly`
+- **SOW:** Phase 1 carryover + Phase 2 (May onwards) baselines in skill references
+- **Editorial:** Synthesize themes — not a message transcript
+- **Schedule:** See `AUTOMATION.md` — Monday 7 AM America/New_York
 
 ## Team setup — analytics config
 

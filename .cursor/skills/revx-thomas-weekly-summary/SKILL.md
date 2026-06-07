@@ -24,7 +24,8 @@ and adds a **separate SOW compliance** block. Default **test mode** = DM to requ
 - **Two blocks** — channel summary + SOW compliance (separate, with `---`)
 - **Never invent** status, completions, metrics, or SOW progress
 - **Ignore Est. Hours** in all SOW references
-- **Compact default** — ≤ 900 chars total; max 2 bullets/section, 15 words/bullet — see editorial guardrails
+- **Plain English** — full coherent sentences; no acronyms (spell out Salesforce, HubSpot); no SOW item numbers in prose
+- **Compact** — ≤ 1,100 chars total; max 2 bullets/section — see editorial guardrails
 - **Omit empty sections** — no "None this week" padding
 - **Test default** — DM to requester; prod channel only on explicit request
 - **Week window** — Sunday 00:00 – Saturday 23:59 America/New_York unless user specifies dates
@@ -87,19 +88,20 @@ Phase 2 is primary from May onward; SOW 1 in-progress items stay on radar.
 
 ## EDIT
 
-1. Rewrite chat-log bullets → ≤ 15 words each
-2. Merge duplicate themes across sections
-3. **Count characters — must be ≤ 900**; cut per priority order in editorial guardrails
+1. Replace acronyms and SOW IDs with plain English deliverable names
+2. Rewrite fragments and semicolon chains → one complete sentence per bullet
+3. Read-aloud test — must sound like exec brief, not tags
+4. **Count characters — must be ≤ 1,100**; cut per priority order in editorial guardrails
 
 ---
 
 ## CHECK
 
-- [ ] **Total ≤ 900 characters**
+- [ ] **Total ≤ 1,100 characters**
+- [ ] Every bullet is a **complete coherent sentence**
+- [ ] No acronyms (Salesforce, HubSpot spelled out; no 1.7, SF, HS, SDR)
 - [ ] Not a transcript — synthesized themes only
-- [ ] ≤2 bullets per section (≤1 for Done/Debate/Focus)
-- [ ] Empty sections omitted
-- [ ] SOW block ≤ 4 compact lines
+- [ ] ≤2 bullets per section; empty sections omitted
 - [ ] No invented SOW status or completions
 - [ ] Test mode → DM only unless prod confirmed
 

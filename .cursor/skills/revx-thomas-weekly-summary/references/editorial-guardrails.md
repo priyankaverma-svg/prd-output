@@ -2,79 +2,83 @@
 
 ## Core rule
 
-**Synthesize themes — never transcribe.** Leadership skim-reads in under 60 seconds.
+**Short executive brief in plain English** — coherent sentences a non-technical leader can read aloud without decoding.
 
-## Hard length limits (non-negotiable)
+## Voice test
+
+Read each bullet aloud. If it sounds like a Slack tag line, a ticket ID, or a fragment — rewrite as a full sentence.
+
+## Hard limits
 
 | Limit | Value |
 |-------|-------|
-| **Total message** | ≤ 900 characters (both blocks combined) |
-| **Bullets per section** | Max **2**; use **1** when possible |
-| **Words per bullet** | Max **15** |
-| **SOW block total bullets** | Max **4** (combine statuses) |
-| **Empty sections** | **Omit** the section header entirely |
-| **Footer** | One line: `_#revx-thomas · {week}_` — no message counts, no amendment essay |
+| **Total message** | ≤ 1,100 characters (both blocks) |
+| **Bullets per section** | Max **2**; prefer **1** |
+| **Each bullet** | One **complete sentence** — subject, verb, outcome |
+| **Empty sections** | Omit entirely |
 
-If over limit after EDIT, cut lowest-priority bullets until under 900 chars.
+If over 1,100 chars, drop lowest-priority section (Debate → Done detail → second Top bullet).
 
-## Abstraction
+## Acronyms and jargon — avoid
+
+| Don't use | Use instead |
+|-----------|-------------|
+| SF, HS | Salesforce, HubSpot |
+| SDR | sales rep (or spell out once) |
+| MQL, SQL | marketing qualified lead, sales qualified lead |
+| 1.7, 1.6, MOP-3602 in summary | Plain deliverable name: "first-touch attribution", "lead assignment" |
+| interim, quiet, delta, TBD | plain status: "still open", "no update this week" |
+| first+last, URL/phone | "first touch and last touch", "website or phone number" |
+| z-archive | "archived forms" |
+
+**Allowed without spelling out:** RevX, Thomas, names of people.
+
+## Sentence style
 
 | Do | Don't |
 |----|--------|
-| One theme = one short bullet | Multi-clause bullets with semicolons |
-| Merge related topics | Separate bullets for same theme |
-| Drop "completed" admin noise | List every doc share and MoM |
-| Combine SOW items: `1.5–1.6 in progress` | One bullet per SOW line when status unchanged |
+| Full sentences with context | Semicolon chains (`A; B; C`) |
+| One idea per bullet | Telegram tags (`Attribution: first+last agreed`) |
+| Plain words over internal shorthand | `disqualify logic`, `property mapping`, `routing not HS delay` |
+| Say who does what when owner matters | `Jatinder:` colon-only fragments |
 
-## Voice
+**Good:** Leadership agreed to show first-touch and last-touch campaign credit in two fields while campaign-level reporting is still being defined.
 
-- Telegram-style: noun + outcome (`Attribution: first+last touch agreed`)
-- No sub-bullets, no parentheticals, no "team discussed"
-- Acronyms OK if widely known (HS, SF); spell out once only if needed
-- Active voice only
+**Bad:** First+last touch agreed interim; campaign property mapping still open.
 
-## Section priority (cut in this order if too long)
+## Sections
 
-1. Drop *Hotly debated* if same theme already in *Top*
-2. Merge *Done* into *Top* as past-tense clause
-3. Trim *Next* to owner + action only (no meeting names)
-4. SOW: one line for on-track, one for at-risk, one for quiet items combined
+| Section | Label | Content |
+|---------|-------|---------|
+| Top | `*Top discussion*` | 1–2 decisions or themes in full sentences |
+| Done | `*Completed*` | What actually finished — skip routine MoM posts |
+| Next | `*Next steps*` | 1–2 forward actions with owner name in prose |
+| Debate | `*Open debate*` | One unresolved disagreement in plain language |
+| Focus | `*Needs attention*` | Top blocker or decision still open |
+| SOW | `*SOW compliance*` | 2–3 sentences — no item numbers |
 
-## Section bars
+## SOW block
 
-| Section | Max bullets | Content |
-|---------|-------------|---------|
-| Top | 2 | Decisions + themes only |
-| Done | 1 | Biggest completions; omit if none material |
-| Next | 2 | Owner + verb; highest priority only |
-| Debate | 1 | Single open fork |
-| Focus | 1 | Top blocker or decision |
-| SOW | 4 | Status deltas only — not a registry |
-
-## SOW block (compact)
-
-Format as tight status lines, not subsections:
+Write as **plain-language status**, not a registry:
 
 ```
-*SOW*
-• On track: {ids} — {3-5 word delta}
-• At risk: {ids} — {why}
-• Quiet: {ids combined} — no signal
+*SOW compliance*
+• First-touch attribution direction is set and aligned with leadership.
+• Lead assignment in Salesforce is at risk because routing rules for incomplete records are not closed.
+• No channel update this week on company matching, campaign name fix, or May scope.
 ```
 
-Skip "In progress (no weekly delta)" — fold into Quiet or omit.
-Skip "Amendments in effect" unless user asks.
-Skip Phase 2 mention when week is pre-May unless relevant.
+No `On track:` / `At risk:` / `Quiet:` prefixes. No numbered line items unless user asks.
 
 ## EDIT step
 
-1. Count characters — must be ≤ 900
-2. Shorten every bullet to ≤ 15 words
-3. Delete duplicate themes across sections
-4. Remove any bullet that restates another
+1. Replace every acronym and SOW ID with plain English
+2. Split semicolon chains into separate bullets or one full sentence
+3. Read-aloud test each bullet
+4. Count characters — trim to ≤ 1,100 without sacrificing coherence
 
-## Anti-pattern
+## Anti-patterns
 
-**Bad (too long):** Inclusion/exclusion: Team reviewed Tigran's comments on criteria doc; RevX will publish updated inclusion list. Z-archive forms stay for history only.
+**Fragment:** `Quiet: 1.4, 1.5, Phase 2 — no April signal`
 
-**Good:** Inclusion list update in flight; z-archive = history only.
+**Coherent:** No channel update this week on company matching, campaign name fix, or May scope.

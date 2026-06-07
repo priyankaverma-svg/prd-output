@@ -1,37 +1,29 @@
-# Slack output template — COMPACT (default)
+# Slack output template — plain English (default)
 
-**Target: ≤ 900 characters total.** Omit empty sections.
+**Target: ≤ 1,100 characters.** Full sentences. No acronyms. Omit empty sections.
 
 ```
-*#revx-thomas · Week Sun {MM/DD}–Sat {MM/DD}*
+*#revx-thomas · Week of {Month DD}–{Month DD, YYYY}*
 
-*Top*
-• …
-• …
+*Top discussion*
+• {Complete sentence.}
+• {Complete sentence.}
 
-*Done*
-• …
+*Completed*
+• {Complete sentence.}
 
-*Next*
-• …
+*Next steps*
+• {Complete sentence.}
 
-*Debate*
-• …
+*Open debate*
+• {Complete sentence.}
 
-*Focus*
-• …
+*Needs attention*
+• {Complete sentence.}
 
 ---
 
-*SOW*
-• On track: …
-• At risk: …
-• Quiet: …
+*SOW compliance*
+• {Complete sentence — plain deliverable names, no item numbers.}
+• {Complete sentence.}
 ```
-
-## Rules
-
-- Max 2 bullets in Top/Next; max 1 in Done/Debate/Focus
-- Max 4 lines in SOW block
-- No `---` if SOW block is empty (rare)
-- Section labels: `*Top*` `*Done*` `*Next*` `*Debate*` `*Focus*` `*SOW*` — not full sentences

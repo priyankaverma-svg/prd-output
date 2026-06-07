@@ -1,0 +1,35 @@
+# Team analytics config — copy to analytics-config.yaml and customize.
+# BRD skill uses ONLY these approved query templates. No ad-hoc SQL.
+
+snowflake:
+  metrics:
+    quote_volume:
+      description: Affected quote volume in segment
+      snowflake_view: XOMETRY_MODELS.BXP.QUOTE_FUNNEL
+      volume_column: quote_count
+      rate_column: conversion_rate
+    revenue_exposure:
+      description: Revenue at risk estimate
+      snowflake_view: XOMETRY_MODELS.BXP.REVENUE_EXPOSURE
+      exposure_column: revenue_at_risk
+
+  query_templates:
+    segment_impact:
+      sql: |
+        SELECT
+          {{volume_col}} AS volume,
+          {{rate_col}} AS rate
+        FROM {{view}}
+        WHERE report_date >= DATEADD(day, -{{window_days}}, CURRENT_DATE())
+          AND segment = '{{segment}}'
+      params: [view, volume_col, rate_col, segment, window_days]
+
+fullstory:
+  # User must provide session_id or user identifier — no aggregate queries
+  use_for: [evidence_tier_2, current_state_examples]
+  tools: [fullstory_sessions_for_user, fullstory_session_events]
+
+conviva:
+  # User must name metric/dashboard — authenticate via mcp_auth first
+  use_for: [experience_evidence, engagement_impact]
+  note: Ask user which Conviva metric maps to the business problem

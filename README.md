@@ -1,6 +1,6 @@
-# PRD Assistant
+# BRD & PRD Assistant
 
-Cursor skill for product managers: structured 19-field PRD interview, critical review, 6-page docx export, and optional Jira handoff.
+Cursor skills for product and business teams: structured BRD and PRD interviews, critical review, 6-page docx export, analytics-backed evidence, and BRD → PRD handoff.
 
 ## For teammates — get started in 2 minutes
 
@@ -17,81 +17,67 @@ Cursor skill for product managers: structured 19-field PRD interview, critical r
 
 3. **Open the folder in Cursor** (File → Open Folder → select `prd-output`)
 
-4. **Run the skill** in Agent chat:
-   - Type `@prd`, or
-   - Ask: *"Help me write a PRD"*
+4. **Run a skill** in Agent chat:
+   - `@brd` — Business Requirements Document (WHAT & WHY)
+   - `@prd` — Product Requirements Document (HOW)
 
-5. **Answer one question at a time** through the 19-field interview. The agent will review, export a 6-page docx, and optionally connect to Jira.
+5. **Answer one question at a time.** The agent reviews, exports a 6-page docx, and offers handoff (BRD → PRD → Jira).
 
-6. **Connect MCP tools** you need (optional Atlassian for Jira; Snowflake for impact baselines). Each person configures MCP in their own Cursor settings.
+6. **Connect MCP tools** (optional, per person): Snowflake, FullStory, Conviva, Atlassian.
 
 ## What's in this repo
 
 | Path | Purpose |
 |------|---------|
-| `.cursor/skills/prd/` | Main PRD assistant skill |
-| `.cursor/skills/prd-codebase-scan/` | Codebase dependency scan (Field 13) |
+| `.cursor/skills/brd/` | BRD assistant — 17 fields + FAQ |
+| `.cursor/skills/prd/` | PRD assistant — 19 fields |
+| `.cursor/skills/prd-codebase-scan/` | Codebase dependency scan (PRD Field 13) |
 | `AI-INSTRUCTIONS.md` | Human-readable workflow summary |
-| `outputs/` | Generated PRD markdown and docx files |
+| `outputs/` | Generated BRD/PRD markdown and docx |
 | `requirements.txt` | Python deps for docx export |
 
-## Skill files
+## BRD workflow
 
 ```
-.cursor/skills/prd/
-├── SKILL.md                  # Main workflow — start here
-├── interview-fields.md       # 19-field interview definitions
-├── impact-analysis.md        # NSM / WBR / Snowflake / paste / manual
-├── review-checklist.md       # Critical "check my work" audit
-├── prd-output-template.md    # 6-page PRD structure
-├── jira-handoff.md           # Epic + backlog / Confluence
-├── references/
-│   └── nsm-config.example.yaml
-└── scripts/
-    └── generate_prd_docx.py
+ENTRY → DATA SOURCES → INTERVIEW (17 + FAQ) → GENERATE → REVIEW → EXPORT → PRD (optional)
 ```
 
-## Team setup — NSM config
+- **DATA SOURCES**: Snowflake, FullStory, Conviva, paste/upload, or manual
+- **6-page main body** (appendix excluded)
+- **Appendix A**: BRD Checklist (not counted toward page limit)
+- **REVIEW**: Apply all changes or show changes needed only
+- **PRD handoff**: `@prd` with BRD as input after approval
 
-Copy and customize for your team's Snowflake views:
-
-```bash
-cp .cursor/skills/prd/references/nsm-config.example.yaml \
-   .cursor/skills/prd/references/nsm-config.yaml
-```
-
-Edit `nsm-config.yaml` with approved query templates. The agent never invents SQL.
-
-## Workflow
+## PRD workflow
 
 ```
 ENTRY → INTERVIEW (19 fields) → GENERATE → REVIEW → EXPORT → JIRA (optional)
 ```
 
-- **REVIEW**: Agent critically audits the PRD, then asks apply all changes or show changes only
-- **EXPORT**: 6-page `.docx` saved to `outputs/`
-- **JIRA**: Optional Epic + backlog from functional requirements
+- Accepts approved BRD as ENTRY option 2
+- Snowflake / WBR / paste for impact metrics (Fields 5–7)
+- 6-page docx + optional Jira Epic + backlog
 
-## Maintainer — first-time push to GitHub
+## Team setup — analytics config
 
+**BRD** (Snowflake / FullStory / Conviva):
 ```bash
-git init
-git add .
-git commit -m "Add PRD assistant skill for team"
-
-# Create repo on GitHub → name: prd-output
-
-git branch -M main
-git remote add origin https://github.com/priyankaverma-svg/prd-output.git
-git push -u origin main
+cp .cursor/skills/brd/references/analytics-config.example.yaml \
+   .cursor/skills/brd/references/analytics-config.yaml
 ```
 
-## Updating the skill
+**PRD** (Snowflake NSM):
+```bash
+cp .cursor/skills/prd/references/nsm-config.example.yaml \
+   .cursor/skills/prd/references/nsm-config.yaml
+```
+
+## Updating
 
 Edit files under `.cursor/skills/`, commit, and push. Teammates `git pull` to get updates.
 
 ## Notes
 
-- **Personal MCP config** stays in each user's `~/.cursor/mcp.json` — not in this repo.
-- **Generated PRDs** go in `outputs/` — add your own project subfolders as needed.
-- For methodology details, see `AI-INSTRUCTIONS.md` or ask in Agent with `@prd`.
+- **Personal MCP config** stays in `~/.cursor/mcp.json` — not in this repo.
+- **Generated docs** go in `outputs/`.
+- See `AI-INSTRUCTIONS.md` for methodology details.

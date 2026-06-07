@@ -1,68 +1,101 @@
-# PRD Assistant — AI Instructions
+# BRD & PRD Assistant — AI Instructions
 
-Human-readable summary of the `@prd` skill. For full detail, see `.cursor/skills/prd/SKILL.md`.
+Human-readable summary. Full detail in `.cursor/skills/brd/SKILL.md` and `.cursor/skills/prd/SKILL.md`.
 
-## How to start
+---
 
-Ask in Agent chat: `@prd` or "Help me write a PRD"
+## BRD (`@brd`)
 
-Entry options:
-1. Brainstorming — rough idea, guided interview
-2. Have a BRD — paste it, build PRD
-3. Have notes — paste partial details
-4. Have a draft PRD — skip to review
+**Defines WHAT and WHY** — not HOW. Audience: executives, CTO, business owners.
 
-## Rules the agent follows
+### How to start
+
+`@brd` or "Help me write a BRD"
+
+- Brainstorming from scratch
+- Paste existing notes/doc/brief
+- Draft BRD → skip to review
+
+### Rules
 
 - One question per response
-- Never invents data, SQL, or baselines
-- Missing fields show as `[Enter text]`
-- 6-page hard limit (1 TOC + 5 content pages)
-- Escalates thin answers before moving on
+- Never invents data, SQL, or session metrics
+- **6-page main body** (1 TOC + 5 content)
+- **Appendix A: BRD Checklist** — separate, not counted in 6 pages
+- No solution language
 
-## Interview — 19 fields
+### Data sources (before Fields 3–5)
 
-| # | Field |
-|---|-------|
-| 1–2 | Problem statement, goals |
-| 3–4 | Persona, hypothesis |
-| 5–7 | Impact metrics (data source first) |
-| 8–10 | Happy path, friction, edge cases |
-| 11–12 | Functional + non-functional requirements |
-| 13 | Dependencies (type or Cursor codebase scan) |
-| 14–16 | Assumptions, risks, constraints |
-| 17–18 | RACXI, release strategy |
-| 19 | Stakeholder FAQs |
+Ask which connected tools to use:
+1. Snowflake — warehouse metrics
+2. FullStory — session replay evidence
+3. Conviva — experience analytics
+4. Paste or upload
+5. Manual only
+6. Skip quant
 
-## Impact analysis (Fields 5–7)
+### Interview — 17 fields + FAQ
 
-Agent asks data source before metrics:
-1. Manual
-2. Team NSM reference file (`references/nsm-config.yaml`)
-3. Paste or upload (WBR CSV, dashboard export)
-4. Snowflake (approved query templates only)
-5. Skip quant
+Problem (1–5) · Market (6–7) · Current state (8) · Outcome (9) · Urgency (10) · Financial (11–12) · Approval (13–17) · FAQs
 
-Every metric in the PRD includes a **Source** label.
+### After interview
 
-## After interview
+1. GENERATE → 2. REVIEW → 3. EXPORT (6-page body + appendix docx) → 4. PRD handoff (optional)
 
-1. **GENERATE** — markdown draft from template
-2. **REVIEW** — critical audit; ask apply all or changes only
-3. **EXPORT** — 6-page docx to `outputs/`
-4. **JIRA** (optional) — link, Epic+backlog, or Confluence
+### Outputs
 
-## Dependencies you may need
+```
+outputs/[project-name]-brd.md
+outputs/[project-name]-brd.docx
+```
 
-| Tool | For |
-|------|-----|
-| `python-docx` | Docx export (`pip install -r requirements.txt`) |
-| Atlassian MCP | Jira Epic + tickets |
-| Snowflake MCP | Impact baselines (optional) |
+---
 
-## Outputs
+## PRD (`@prd`)
+
+**Defines HOW** — solution design for eng/design. Audience: PM, engineering, design.
+
+### How to start
+
+`@prd` or "Help me write a PRD"
+
+1. Brainstorming
+2. **Have a BRD** — build PRD from approved BRD
+3. Have notes
+4. Draft PRD → review
+
+### Rules
+
+- 6-page hard limit
+- Never invents SQL or baselines
+- One question per response
+
+### After interview
+
+GENERATE → REVIEW → EXPORT → JIRA (optional)
+
+### Outputs
 
 ```
 outputs/[project-name]-prd.md
 outputs/[project-name]-prd.docx
 ```
+
+---
+
+## BRD → PRD flow
+
+1. Complete BRD with `@brd`
+2. Get executive approval (Appendix A checklist)
+3. Start `@prd` with BRD as input
+4. Optional Jira Epic + backlog from PRD
+
+## MCP dependencies (optional)
+
+| Tool | BRD | PRD |
+|------|-----|-----|
+| Snowflake | Impact & evidence | Impact baselines |
+| FullStory | Session evidence | — |
+| Conviva | Experience evidence | — |
+| Atlassian | — | Jira handoff |
+| `python-docx` | Docx export | Docx export |

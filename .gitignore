@@ -5,8 +5,9 @@ outputs/*
 # Office lock files
 ~$*.docx
 
-# Team NSM config may contain internal table names — customize locally
+# Team configs may contain internal table names — customize locally
 .cursor/skills/prd/references/nsm-config.yaml
+.cursor/skills/brd/references/analytics-config.yaml
 
 # OS
 .DS_Store

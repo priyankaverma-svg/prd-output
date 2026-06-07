@@ -42,9 +42,9 @@ ENTRY → READ → SYNTHESIZE → SOW MAP → EDIT → CHECK → POST PROMPT
 
 Confirm if not provided:
 
-1. **Week range** — e.g. `04/12/2026 – 04/18/2026` (Sun–Sat)
-   - Scheduled runs: previous week ending yesterday (Saturday)
-2. **Mode** — `test` (DM, default) or `prod` (`#supplier-new-leads-generation-internalonly`)
+1. **Week range** — one week Sun–Sat, or multi-week when user specifies (e.g. `5/24/2026 – 6/6/2026`)
+   - Scheduled runs: previous week ending yesterday (Saturday); first prod run was two weeks (see [schedule.md](references/schedule.md))
+2. **Mode** — `prod` for scheduled channel posts; `test` = DM to requester
 
 ---
 

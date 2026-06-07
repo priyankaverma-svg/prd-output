@@ -1,12 +1,22 @@
 # Cursor Automation — RevX Thomas Weekly Summary
 
-## Schedule
+## First report — scheduled in Slack
+
+| Setting | Value |
+|---------|--------|
+| **Post at** | **Monday, June 8, 2026 · 7:00 AM ET** |
+| **Channel** | `#supplier-new-leads-generation-internalonly` |
+| **Window** | **Two weeks:** May 24 – June 6, 2026 |
+
+First message is already scheduled in Slack. See `.cursor/skills/revx-thomas-weekly-summary/references/schedule.md`.
+
+## Ongoing schedule (from June 15, 2026)
 
 | Setting | Value |
 |---------|--------|
 | **Trigger** | Cron: `0 7 * * 1` (Monday 7:00 AM) |
 | **Timezone** | America/New_York |
-| **Week** | Previous Sunday – Saturday (week ending yesterday) |
+| **Week** | Previous Sunday – Saturday (one week) |
 
 ## Tools
 

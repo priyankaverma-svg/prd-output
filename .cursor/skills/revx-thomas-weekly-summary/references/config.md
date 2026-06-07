@@ -8,20 +8,23 @@
 | Production destination | `#supplier-new-leads-generation-internalonly` |
 | Test destination | DM to requester (Priyanka Verma) |
 
-## Schedule (production automation)
+## Schedule (production)
 
-- **When:** Every Monday, 7:00 AM America/New_York
-- **Week window:** Previous Sunday 00:00 – Saturday 23:59 ET (week ending yesterday)
-- **Automation:** See `AUTOMATION.md` in repo root or `references/automation-prompt.md`
+| Run | When | Window |
+|-----|------|--------|
+| **First (scheduled)** | Mon **6/8/2026** 7 AM ET | **Two weeks:** 5/24/2026 – 6/6/2026 |
+| **Ongoing** | Every Monday 7 AM ET | Previous Sun–Sat (one week) |
+
+Details: [schedule.md](schedule.md) · Automation: `AUTOMATION.md`
 
 ## Modes
 
-| Mode | Default | Destination |
-|------|---------|-------------|
-| `test` | **Yes** until user says prod | DM to requester |
-| `prod` | Only on explicit request | `#supplier-new-leads-generation-internalonly` |
+| Mode | Destination |
+|------|-------------|
+| `test` | DM to requester |
+| `prod` | `#supplier-new-leads-generation-internalonly` (`C0AR8GURAMT`) |
 
-Never post to prod channel during test without explicit confirmation.
+Scheduled production runs use **prod** channel.
 
 ## SOW scope
 

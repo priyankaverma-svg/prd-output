@@ -125,21 +125,19 @@ See [sow-date-rules.md](references/sow-date-rules.md).
 
 ---
 
-## POST PROMPT
+## POST — no review gate on prod
 
-**Test (default):**
+**Prod (channel) — auto-send, never draft:**
 
-> Ready to send this weekly summary to **your DM** for review?
+- Post to `#supplier-new-leads-generation-internalonly` (`C0AR8GURAMT`) **without asking for review**
+- **Scheduled Monday 7 AM:** use `slack_schedule_message` with `post_at` — message sends automatically at that time
+- **Immediate prod post:** use `slack_send_message` directly
+- **Never** use `slack_send_message_draft` for the production channel
 
-- `slack_search_users` → Priyanka Verma (or requester name user gives)
-- `slack_send_message_draft` to user `user_id` as `channel_id`
-- Send directly only if user explicitly approves
+**Test (DM only):**
 
-**Prod:**
-
-> Ready to post to **#supplier-new-leads-generation-internalonly**?
-
-Only when mode = prod and user confirms.
+- Optional: `slack_send_message_draft` to requester for preview
+- Or `slack_send_message` if user wants immediate DM
 
 Save optional: `outputs/revx-thomas-summary-{YYYY-MM-DD-week-end}.md`
 

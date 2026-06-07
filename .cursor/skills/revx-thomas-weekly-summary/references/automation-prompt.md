@@ -17,7 +17,7 @@ Steps:
 3. Build SOW compliance block — deliverable + date (when in baseline) + status. Missing SOW dates → add needs-attention bullets; never invent dates or block the post.
 4. Ignore Est. Hours. Never invent status, metrics, or dates.
 5. Run CHECK from SKILL.md.
-6. slack_send_message_draft to Priyanka Verma DM (test) or send on explicit approval.
+6. PROD: slack_schedule_message (Monday 7 AM ET) or slack_send_message — auto-send, no draft, no review wait. TEST only: optional DM draft.
 
 Repo skill: .cursor/skills/revx-thomas-weekly-summary/SKILL.md
 ```

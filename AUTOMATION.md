@@ -8,7 +8,9 @@
 | **Channel** | `#supplier-new-leads-generation-internalonly` |
 | **Window** | **Two weeks:** May 24 – June 6, 2026 |
 
-First message is already scheduled in Slack. See `.cursor/skills/revx-thomas-weekly-summary/references/schedule.md`.
+First message is already scheduled in Slack (`Dr0B8TE2NZK8`). It **auto-sends at 7 AM** — no draft, no review step. See `references/schedule.md`.
+
+**Prod rule:** use `slack_schedule_message` or `slack_send_message` — never `slack_send_message_draft` on the channel.
 
 ## Ongoing schedule (from June 15, 2026)
 

@@ -7,7 +7,8 @@
 | **Post at** | Monday, June 8, 2026 · 7:00 AM America/New_York |
 | **Channel** | `#supplier-new-leads-generation-internalonly` (`C0AR8GURAMT`) |
 | **Window** | **Two weeks:** May 24 – June 6, 2026 (Sun–Sat × 2) |
-| **Status** | Scheduled via Slack MCP |
+| **Status** | Scheduled via Slack MCP — **auto-sends at 7 AM, no review required** |
+| **Scheduled ID** | `Dr0B8TE2NZK8` |
 
 ## Ongoing (from June 15 onward)
 

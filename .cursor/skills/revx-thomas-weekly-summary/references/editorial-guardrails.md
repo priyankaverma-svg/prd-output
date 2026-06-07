@@ -71,7 +71,7 @@ Date from baseline, channel, or user (after SOW DATE GATE). See [sow-date-rules.
 ```
 
 No `On track:` / `At risk:` / `Quiet:` prefixes. No numbered line items unless user asks.
-If baseline date is missing, **ask user before final output** — do not publish dateless SOW bullets.
+If baseline date is missing, add **needs-attention bullets** flagging that the SOW item needs a target date — do not invent dates and do not block the post.
 
 ## EDIT step
 

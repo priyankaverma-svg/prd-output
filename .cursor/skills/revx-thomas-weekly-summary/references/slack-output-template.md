@@ -27,5 +27,5 @@
 • {Deliverable (date/timeline) + status — complete sentence.}
 • {Deliverable (date/timeline) + status — complete sentence.}
 
-If baseline date missing → SOW DATE GATE: ask user before posting.
+If baseline date missing → flag in *Needs attention* that SOW needs a target date (do not ask or block).
 ```

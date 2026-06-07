@@ -12,7 +12,7 @@ MODE: test — DM summary to Priyanka Verma only. Do NOT post to #supplier-new-l
 Steps:
 1. Read #revx-thomas including threads (Slack MCP).
 2. Synthesize per editorial-guardrails.md — plain English full sentences, ≤1100 chars, no acronyms, never transcript.
-3. Build SOW compliance block — each bullet: deliverable + date + status. Run SOW DATE GATE: ask user for missing dates before post (scheduled runs: use baseline dates only; flag items needing date update in DM).
+3. Build SOW compliance block — deliverable + date (when in baseline) + status. Missing SOW dates → add needs-attention bullets; never invent dates or block the post.
 4. Ignore Est. Hours. Never invent status, metrics, or dates.
 5. Run CHECK from SKILL.md.
 6. slack_send_message_draft to Priyanka Verma DM (test) or send on explicit approval.

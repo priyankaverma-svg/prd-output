@@ -1,41 +1,44 @@
-# SOW dates — required in compliance output
+# SOW dates — compliance output
 
-Every SOW compliance bullet must include a **date or timeline** for the deliverable mentioned.
+Every SOW compliance bullet should include a **date or timeline** when the baseline provides one.
 
-## Date sources (priority order)
+## Date sources
 
 1. **SOW baseline** — `Timeline` column in phase1/phase2 baselines
-2. **Channel evidence** — explicit date in `#revx-thomas` this week (e.g. "follow-up early next week")
-3. **User confirmation** — user provides when asked in SOW DATE GATE
+2. **Channel evidence** — explicit date in `#revx-thomas` this week
 
-Never invent dates. Never write "TBD" in final output without asking user first.
+Never invent dates.
 
-## Missing date = GATE before finalize
+## When baseline date is missing (`—`, `TBD`, empty)
 
-If a deliverable appears in the SOW compliance draft and baseline shows `—`, `TBD`, empty, or `Week X–Y` without calendar dates, **stop and ask**:
+Do **not** stop and ask the user. Instead:
 
-> For *[deliverable name]*, the SOW has no firm date yet. What target date or week should I use in this summary? (Or reply "skip" to omit from this week.)
+1. Write the SOW compliance bullet **without** a fabricated date
+2. Add **1–3 bullets** under `*Needs attention*` (or extend existing Focus/attention) calling out that the SOW item **needs a target date defined**
 
-Ask **once per missing item**, batched in one message. Do not post until user responds or says skip.
+Example attention bullets:
 
-After user provides dates, offer:
+```
+• Lead assignment in Salesforce needs a firm target date added to the SOW (baseline shows Week 7–8, date pending).
+• Company ID alignment needs a scheduled start date — SOW shows Week 4–5 but work is not yet picked up.
+```
 
-> Should I update `sow-phase1-baseline.md` or `sow-phase2-baseline.md` with these dates for future weeks?
+Keep attention bullets short and actionable — flag what's missing, don't block the post.
+
+## When baseline has a date
+
+Include it in the SOW bullet parenthetical:
+
+```
+• Lead assignment in Salesforce (target: Week 7–8) is at risk because routing for incomplete records is still unsettled.
+```
 
 ## Output format
 
-Each SOW bullet = **deliverable + date context + status**:
+Each SOW bullet with known date = **deliverable + date context + status** in one sentence.
 
-```
-• Lead assignment in Salesforce (target: Week 7–8, date pending update) is at risk because routing for incomplete records is still unsettled.
-• First-touch attribution (completed) direction is set and matches leadership’s two-field approach.
-• Company ID alignment (Week 4–5, not yet started) had no channel update this week.
-```
+Items missing dates → compliance note (no date parenthetical) + attention bullets flagging date gap.
 
-## Completed items
+## Optional baseline update
 
-Include completion context if known: `(completed)` or `(completed, Week 2–3)`.
-
-## Phase 2 (May onwards)
-
-Use baseline timeline when present. If bucket has no calendar date, ask before including in compliance block.
+After delivery, mention once: user can update baseline files if they want dates stored for future weeks. Do not require confirmation before posting.

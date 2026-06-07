@@ -89,16 +89,15 @@ Each compliance bullet: **deliverable + date/timeline + status** in plain Englis
 
 ---
 
-## SOW DATE GATE (before final output)
+## SOW dates (missing = flag, don't block)
 
-For every deliverable in the draft SOW block:
+For every deliverable in the SOW block:
 
-1. Pull date from baseline `Timeline` column
-2. If `—`, `TBD`, empty, or vague `Week X–Y` without calendar date → **ask user** for target date (batch asks in one message)
-3. Do not post until user provides dates or says **skip** for that item
-4. After user adds dates, offer to update baseline files for future weeks
+1. Pull date from baseline `Timeline` when present — include in bullet
+2. If `—`, `TBD`, empty, or date pending → **do not invent a date**; add 1–3 bullets under `*Needs attention*` noting the item **needs a target date on the SOW**
+3. Never stop or ask user before posting — flag date gaps in attention instead
 
-Never invent dates. Never omit date parenthetical when baseline has one.
+See [sow-date-rules.md](references/sow-date-rules.md).
 
 ---
 
@@ -116,7 +115,7 @@ Never invent dates. Never omit date parenthetical when baseline has one.
 - [ ] **Total ≤ 1,100 characters**
 - [ ] Every bullet is a **complete coherent sentence**
 - [ ] No acronyms (Salesforce, HubSpot spelled out; no 1.7, SF, HS, SDR)
-- [ ] Every SOW bullet includes deliverable + date/timeline; GATE run for missing dates
+- [ ] SOW bullets use baseline dates when present; missing dates flagged in *Needs attention*
 - [ ] Not a transcript — synthesized themes only
 - [ ] ≤2 bullets per section; empty sections omitted
 - [ ] No invented SOW status or completions

@@ -20,16 +20,16 @@ Week April 12–18, 2026.
 
 *Needs attention*
 • Leads without a website or phone number still need a defined enrichment step before sales assignment.
+• Lead assignment in Salesforce needs a firm target date on the SOW (baseline shows Week 7–8, date still pending).
+• Company ID alignment needs a scheduled start date — listed as Week 4–5 but not yet picked up.
 
 ---
 
 *SOW compliance*
 • First-touch attribution (completed) direction is set and matches leadership’s two-field approach.
-• Lead assignment in Salesforce (target: Week 7–8, date pending update) is at risk because routing for incomplete records is still unsettled.
+• Lead assignment in Salesforce is at risk because routing for incomplete records is still unsettled.
 • Company ID alignment (Week 4–5, not yet started) and campaign name fix (Week 6–7) had no channel update this week.
 • May Phase 2 scope had no channel activity during this April week.
 ```
 
-## SOW DATE GATE example (when baseline lacks date)
-
-Agent: "Lead assignment shows *Week 7–8 (updated)* but no calendar date. Company ID shows *Week 4–5* — should I use those, or provide firm dates (MM/DD)? Reply skip to omit an item."
+Note: lead assignment has no firm date in baseline — flagged under *Needs attention*, not invented in SOW bullet.

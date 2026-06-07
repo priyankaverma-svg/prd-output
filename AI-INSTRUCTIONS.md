@@ -1,6 +1,6 @@
-# BRD & PRD Assistant — AI Instructions
+# BRD, PRD & Release Notes — AI Instructions
 
-Human-readable summary. Full detail in `.cursor/skills/brd/SKILL.md` and `.cursor/skills/prd/SKILL.md`.
+Human-readable summary. Full detail in `.cursor/skills/*/SKILL.md`.
 
 ---
 
@@ -83,19 +83,48 @@ outputs/[project-name]-prd.docx
 
 ---
 
-## BRD → PRD flow
+## Release notes (`@release-notes`)
 
-1. Complete BRD with `@brd`
-2. Get executive approval (Appendix A checklist)
-3. Start `@prd` with BRD as input
-4. Optional Jira Epic + backlog from PRD
+**One 7-line launch slot** for a product newsletter — not the full newsletter.
+
+### How to start
+
+`@release-notes` or "write release notes for the newsletter"
+
+- Paste raw notes / Jira fix version / draft block
+
+### ENTRY (always ask)
+
+**Audience:** company-wide newsletter (default) or customer-facing
+
+### Rules
+
+- **7 lines exactly** — narrative, no bullets
+- Self-contained — reader may skim only this block
+- Never invents metrics or dollar figures
+- **PRD link required** on line 7; ticket optional
+- "No impact metrics" must be explicit from user
+
+### Output
+
+```
+outputs/[feature-slug]-release-note.md  (optional)
+```
+
+---
+
+## BRD → PRD → Ship flow
+
+1. `@brd` → executive approval
+2. `@prd` with BRD as input
+3. Ship → `@release-notes` for newsletter slot
 
 ## MCP dependencies (optional)
 
-| Tool | BRD | PRD |
-|------|-----|-----|
-| Snowflake | Impact & evidence | Impact baselines |
-| FullStory | Session evidence | — |
-| Conviva | Experience evidence | — |
-| Atlassian | — | Jira handoff |
-| `python-docx` | Docx export | Docx export |
+| Tool | BRD | PRD | Release notes |
+|------|-----|-----|---------------|
+| Snowflake | Impact & evidence | Impact baselines | Impact line |
+| FullStory | Session evidence | — | — |
+| Conviva | Experience evidence | — | — |
+| Atlassian | — | Jira handoff | Jira input / ticket link |
+| `python-docx` | Docx export | Docx export | — |

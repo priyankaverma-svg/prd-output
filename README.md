@@ -1,6 +1,6 @@
-# BRD & PRD Assistant
+# BRD, PRD & Release Notes Assistant
 
-Cursor skills for product and business teams: structured BRD and PRD interviews, critical review, 6-page docx export, analytics-backed evidence, and BRD → PRD handoff.
+Cursor skills for product and business teams: BRD/PRD interviews, 6-page docx export, newsletter launch briefs, and BRD → PRD handoff.
 
 ## For teammates — get started in 2 minutes
 
@@ -20,10 +20,13 @@ Cursor skills for product and business teams: structured BRD and PRD interviews,
 4. **Run a skill** in Agent chat:
    - `@brd` — Business Requirements Document (WHAT & WHY)
    - `@prd` — Product Requirements Document (HOW)
+   - `@release-notes` — 7-line newsletter launch slot
 
-5. **Answer one question at a time.** The agent reviews, exports a 6-page docx, and offers handoff (BRD → PRD → Jira).
+5. **BRD/PRD:** one question at a time → review → 6-page docx → optional handoff.
 
-6. **Connect MCP tools** (optional, per person): Snowflake, FullStory, Conviva, Atlassian.
+6. **Release notes:** paste raw notes → 7-line newsletter slot (company-wide or customer-facing).
+
+7. **Connect MCP tools** (optional, per person): Snowflake, FullStory, Conviva, Atlassian.
 
 ## What's in this repo
 
@@ -32,8 +35,9 @@ Cursor skills for product and business teams: structured BRD and PRD interviews,
 | `.cursor/skills/brd/` | BRD assistant — 17 fields + FAQ |
 | `.cursor/skills/prd/` | PRD assistant — 19 fields |
 | `.cursor/skills/prd-codebase-scan/` | Codebase dependency scan (PRD Field 13) |
+| `.cursor/skills/release-notes/` | 7-line newsletter launch brief |
 | `AI-INSTRUCTIONS.md` | Human-readable workflow summary |
-| `outputs/` | Generated BRD/PRD markdown and docx |
+| `outputs/` | Generated BRD/PRD/release-note files |
 | `requirements.txt` | Python deps for docx export |
 
 ## BRD workflow
@@ -57,6 +61,18 @@ ENTRY → INTERVIEW (19 fields) → GENERATE → REVIEW → EXPORT → JIRA (opt
 - Accepts approved BRD as ENTRY option 2
 - Snowflake / WBR / paste for impact metrics (Fields 5–7)
 - 6-page docx + optional Jira Epic + backlog
+
+## Release notes workflow
+
+```
+ENTRY → EXTRACT → GATE → WRITE (7 lines) → CHECK → REVISE (optional)
+```
+
+- **One slot** in a weekly/monthly newsletter (not the full newsletter)
+- **7 lines** narrative — professional, self-contained, context built in
+- **Audience:** company-wide (default) or customer-facing
+- **PRD link required** on line 7; ticket optional
+- Optional Snowflake / Jira for impact data
 
 ## Team setup — analytics config
 

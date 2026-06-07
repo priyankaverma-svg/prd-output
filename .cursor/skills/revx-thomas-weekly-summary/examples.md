@@ -1,4 +1,4 @@
-# Example — plain English (gold standard)
+# Example — plain English with SOW dates (gold standard)
 
 Week April 12–18, 2026.
 
@@ -24,7 +24,12 @@ Week April 12–18, 2026.
 ---
 
 *SOW compliance*
-• First-touch attribution direction is set and matches leadership’s two-field approach.
-• Lead assignment in Salesforce is at risk because routing for incomplete records is still unsettled.
-• No channel update this week on company matching, campaign name fix, or May Phase 2 scope.
+• First-touch attribution (completed) direction is set and matches leadership’s two-field approach.
+• Lead assignment in Salesforce (target: Week 7–8, date pending update) is at risk because routing for incomplete records is still unsettled.
+• Company ID alignment (Week 4–5, not yet started) and campaign name fix (Week 6–7) had no channel update this week.
+• May Phase 2 scope had no channel activity during this April week.
 ```
+
+## SOW DATE GATE example (when baseline lacks date)
+
+Agent: "Lead assignment shows *Week 7–8 (updated)* but no calendar date. Company ID shows *Week 4–5* — should I use those, or provide firm dates (MM/DD)? Reply skip to omit an item."

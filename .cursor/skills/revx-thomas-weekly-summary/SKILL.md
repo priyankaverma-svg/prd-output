@@ -79,10 +79,26 @@ Separate block using:
 - [sow-phase1-baseline.md](references/sow-phase1-baseline.md) — open carryover items
 - [sow-phase2-baseline.md](references/sow-phase2-baseline.md) — May 2026+ buckets
 - [sow-dependencies.md](references/sow-dependencies.md) — blocked rules
+- [sow-date-rules.md](references/sow-date-rules.md) — **dates required**
 
 Classify: On track · At risk · Blocked · No channel signal · Completed (with evidence)
 
 Phase 2 is primary from May onward; SOW 1 in-progress items stay on radar.
+
+Each compliance bullet: **deliverable + date/timeline + status** in plain English.
+
+---
+
+## SOW DATE GATE (before final output)
+
+For every deliverable in the draft SOW block:
+
+1. Pull date from baseline `Timeline` column
+2. If `—`, `TBD`, empty, or vague `Week X–Y` without calendar date → **ask user** for target date (batch asks in one message)
+3. Do not post until user provides dates or says **skip** for that item
+4. After user adds dates, offer to update baseline files for future weeks
+
+Never invent dates. Never omit date parenthetical when baseline has one.
 
 ---
 
@@ -100,6 +116,7 @@ Phase 2 is primary from May onward; SOW 1 in-progress items stay on radar.
 - [ ] **Total ≤ 1,100 characters**
 - [ ] Every bullet is a **complete coherent sentence**
 - [ ] No acronyms (Salesforce, HubSpot spelled out; no 1.7, SF, HS, SDR)
+- [ ] Every SOW bullet includes deliverable + date/timeline; GATE run for missing dates
 - [ ] Not a transcript — synthesized themes only
 - [ ] ≤2 bullets per section; empty sections omitted
 - [ ] No invented SOW status or completions

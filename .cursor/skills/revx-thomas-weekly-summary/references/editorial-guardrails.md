@@ -59,16 +59,19 @@ If over 1,100 chars, drop lowest-priority section (Debate → Done detail → se
 
 ## SOW block
 
-Write as **plain-language status**, not a registry:
+Every bullet must include **deliverable name + date/timeline + status** in one sentence.
+
+Date from baseline, channel, or user (after SOW DATE GATE). See [sow-date-rules.md](sow-date-rules.md).
 
 ```
 *SOW compliance*
-• First-touch attribution direction is set and aligned with leadership.
-• Lead assignment in Salesforce is at risk because routing rules for incomplete records are not closed.
-• No channel update this week on company matching, campaign name fix, or May scope.
+• First-touch attribution (completed) direction is set and matches leadership’s two-field approach.
+• Lead assignment in Salesforce (target: Week 7–8, date pending update) is at risk because routing for incomplete records is still unsettled.
+• Company ID alignment (Week 4–5, not yet started) and campaign name fix (Week 6–7) had no channel update this week.
 ```
 
 No `On track:` / `At risk:` / `Quiet:` prefixes. No numbered line items unless user asks.
+If baseline date is missing, **ask user before final output** — do not publish dateless SOW bullets.
 
 ## EDIT step
 

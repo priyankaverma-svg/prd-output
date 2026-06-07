@@ -24,6 +24,8 @@
 ---
 
 *SOW compliance*
-• {Complete sentence — plain deliverable names, no item numbers.}
-• {Complete sentence.}
+• {Deliverable (date/timeline) + status — complete sentence.}
+• {Deliverable (date/timeline) + status — complete sentence.}
+
+If baseline date missing → SOW DATE GATE: ask user before posting.
 ```

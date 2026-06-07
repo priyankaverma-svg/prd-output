@@ -1,0 +1,12 @@
+# Generated PRDs (keep folder, ignore outputs)
+outputs/*
+!outputs/.gitkeep
+
+# Office lock files
+~$*.docx
+
+# Team NSM config may contain internal table names — customize locally
+.cursor/skills/prd/references/nsm-config.yaml
+
+# OS
+.DS_Store

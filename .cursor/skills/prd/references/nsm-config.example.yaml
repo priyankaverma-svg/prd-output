@@ -1,0 +1,43 @@
+# Team NSM config — copy to nsm-config.yaml and customize.
+# PRD skill uses ONLY these approved query templates. No ad-hoc SQL.
+
+nsms:
+  Session→Quote:
+    description: Session to quote conversion (10-day Q2O)
+    segments:
+      upload_path:
+        snowflake_view: XOMETRY_MODELS.BXP.UPLOAD_PATH_FUNNEL
+        baseline_column: q2o_rate_10d
+        benchmark_column: company_aq_q2o
+        exposure_column: quote_count
+      checkout_path:
+        snowflake_view: XOMETRY_MODELS.BXP.CHECKOUT_PATH_FUNNEL
+        baseline_column: q2o_rate_10d
+        benchmark_column: company_aq_q2o
+        exposure_column: quote_count
+      teamspace:
+        snowflake_view: XOMETRY_MODELS.BXP.TEAMSPACE_FUNNEL
+        baseline_column: q2o_rate_10d
+        benchmark_column: non_teamspace_q2o
+        exposure_column: quote_count
+
+  Quote→Order:
+    description: Quote to order conversion
+    segments:
+      checkout_path:
+        snowflake_view: XOMETRY_MODELS.BXP.CHECKOUT_Q2O
+        baseline_column: q2o_rate
+        benchmark_column: company_aq_q2o
+        exposure_column: quote_count
+
+# Parameterized query templates — substitute {{view}}, {{baseline_col}}, {{window_days}}
+query_templates:
+  baseline:
+    sql: |
+      SELECT
+        {{baseline_col}} AS baseline,
+        {{benchmark_col}} AS benchmark,
+        {{exposure_col}} AS exposure
+      FROM {{view}}
+      WHERE report_date >= DATEADD(day, -{{window_days}}, CURRENT_DATE())
+    params: [view, baseline_col, benchmark_col, exposure_col, window_days]
